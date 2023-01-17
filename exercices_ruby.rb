@@ -133,53 +133,51 @@
 	# 	puts arr
 
 # #ruby exo_12.rb
-# 	puts "Quelle est ton année de naissance ?"
-# 	birth_year = gets.chomp.to_i
+	# puts "Quelle est ton âge ?"
+	# age = gets.chomp.to_i
+	# current_year = 2023
+	# year = current_year - age - 1
+	# ton_age = age + 1
+
+	# for i in 0..age
+	# 	if i == 0 then
+	# 		puts "En #{year}, il y a #{ton_age} ans, tu étais si minuscule qu'on ne pouvait même pas te donner un nombre d'année"
+	# 		year = year + 1
+	# 		ton_age = ton_age -1	
+	# 	elsif i == ton_age then
+	# 		puts "En #{year}, il y a #{ton_age} ans, tu avais la moitié de l'âge que tu as aujourd'hui (#{i} ans !!)"
+	# 		year = year + 1
+	# 		ton_age = ton_age -1
+	# 	else
+	# 		puts "En #{year}, il y a #{ton_age} ans, tu avais #{i} ans"
+	# 		year = year + 1
+	# 		ton_age = ton_age -1
+	# 	end
+	# end
+	# puts "Et en cette année #{year}, tu vas avoir #{i+1} ans !"
+
+
+# #ruby exo_11.rb
+# 	puts "Quelle est ton âge ?"
+# 	age = gets.chomp.to_i
 # 	current_year = 2023
-# 	i = current_year - birth_year + 1 
-# 	age = 0
-# 	increment = current_year - birth_year 
+# 	year = current_year - age - 1
+# 	ton_age = age + 1
 
-# 	i.times do
-# 		if birth_year != 2023 then
-# 			if increment != age then
-# 				puts "En #{birth_year}, il y a #{increment} ans, tu avais #{age} ans"
-# 				birth_year = birth_year + 1
-# 				age = age + 1
-# 				increment = increment - 1
-# 			elsif increment == age then
-# 				puts "En #{birth_year}, il y a #{increment} ans, tu avais la moitié de l'âge que tu as aujourd'hui"
-# 				birth_year = birth_year + 1
-# 				age = age + 1
-# 				increment = increment - 1
-# 			end
-# 		elsif birth_year == 2023 then
-# 			puts "Et cette année 2023, tu auras #{age} ans !"
+# 	for i in 0..age
+# 		if i == 0 then
+# 			puts "En #{year}, il y a #{ton_age} ans, tu étais si minuscule qu'on ne pouvait même pas te donner un nombre d'année"
+# 			year = year + 1
+# 			ton_age = ton_age -1	
+# 		elsif i > 0 then
+# 			puts "En #{year}, il y a #{ton_age} ans, tu avais #{i} ans"
+# 			year = year + 1
+# 			ton_age = ton_age -1
 # 		end
-# 	end	
+# 	end
+# 	puts "Et en cette année #{year}, tu vas avoir #{i+1} ans !"
 
 
-#ruby exo_11.rb
-	puts "Quelle est ton âge ?"
-	age = gets.chomp.to_i
-	current_year = 2023
-	year = current_year - age - 1
-	ton_age = age + 1
-
-	for i in 0..age
-		if i == 0 then
-			puts "En #{year}, il y a #{ton_age} ans, tu étais si minuscule qu'on ne pouvait même pas te donner un nombre d'année"
-			year = year + 1
-			ton_age = ton_age -1	
-		elsif i > 0 then
-			puts "En #{year}, il y a #{ton_age} ans, tu avais #{i} ans"
-			year = year + 1
-			ton_age = ton_age -1
-		end
-	end
-	puts "Et en cette année #{year}, tu vas avoir #{i+1} ans !"
-
-	
 #ruby exo_10.rb
 	# puts "Quelle est ton année de naissance ?"
 	# birth_year = gets.chomp.to_i
