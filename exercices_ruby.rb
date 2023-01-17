@@ -1,10 +1,44 @@
+#ruby exo_08.rb
+    puts "Quel est le compte à rebours ?"
+    number = gets.chomp.to_i
+    i = number
+		j = number + 1
+		j.times do
+			puts i
+			i = i-1
+    end
+
+#ruby exo_07.rb
+    # puts "Jusqu'à combien sais-tu compter ?"
+    # number = gets.chomp.to_i
+    # puts "Vas-y j'essaye"
+    # i =1
+    # number.times do
+    #     puts i
+    #     i = i + 1
+    # end
+    # puts "Et ouais mon gars, moi aussi je sais"
+
+#ruby exo_06.rb
+    # puts "Combien de fois tu veux que je te dise bonjour ?"
+    # number = gets.chomp.to_i
+
+    # if number == 1 then
+    #     puts "Allez, je te dis quand même bonjour une fois....Bonjour, toi"
+    # else 
+    #     i = number - 1
+    #     i.times do
+    #         puts "Bonjour toi"
+    #     end
+    #     puts "Et oui mon gars, tu n'en as eu que #{i} ! Bonne journée quand même"
+    # end
 
 #ruby exo_05.rb
-    puts "Combien de fois veux-tu chanter la vie aujourd'hui ?"
-    number = gets.chomp.to_i
-    number.times do
-        puts "Salut, ca farte ?"
-    end
+    # puts "Combien de fois veux-tu chanter la vie aujourd'hui ?"
+    # number = gets.chomp.to_i
+    # number.times do
+    #     puts "Salut, ca farte ?"
+    # end
 
 
 #ruby exo_04.rb
