@@ -1,3 +1,5 @@
+Test avec tous en commentaires
+
 # #ruby exo_17.rb
 # # Exo 17 : j'ai suivi une logique où j'ai analysé la pyramide et où devait être quoi pour savoir dans chaque elem le nombre de blanc et d'étoile. Après j'ai assemblé.
 # # Longueur de la dernière ligne = (nombre_de_colonne * 2)-1
