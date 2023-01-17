@@ -1,4 +1,4 @@
-ruby exo_01.rb
+# ruby exo_01.rb
     puts "Bonjour, monde !"
 
 
