@@ -1,36 +1,92 @@
-#ruby exo_14.rb
-#Etape 1 : on créer l'array entière avec les 50 e-mails
-	mail_number = 50
-	arr= Array.new
-
-		for i in 1..mail_number
-			if i < 10
-				email = "MachinBidule0" + i.to_s + "@email.fr"
-				arr.push(email)
-			elsif i >= 10
-				email = "MachinBidule" + i.to_s + "@email.fr"
-				arr.push(email)
+ #ruby exo_16.rb
+	puts "De combien d'étages souhaites-tu avoir ta pyramide ? Donne moi un nombre entre 1 et 25"
+	number = gets.chomp.to_i
+	arr=Array.new()
+	
+	if number >= 1 && number <=25 then
+		for num_ligne in 1..number
+			element = ""
+			for i in 1..num_ligne
+				element = "#" + element
 			end
+			for i in 1..(number - num_ligne)
+				element = " " + element
+			end
+			arr.push(element)
 		end
-
-#Etape 2 : on trouve les chiffres pairs et on les supprime grâce à la commande arr.delete_if (Exemple plus bas, arr étant le nom de mon Array)
-		# Find every string matching a criteria and delete the element in the array
-		# arr.delete_if{ |s| s.include? delete}
-		
-		for number_to_delete in (2..8).step(2) do
-			number_to_delete=number_to_delete.to_s
-			first_number_to_delete = "0" + number_to_delete 
-			arr.delete_if{ |s| s.include? first_number_to_delete}
-		end
-
-    for number_to_delete in (10..mail_number).step(2) do
-				number_to_delete=number_to_delete.to_s
-				arr.delete_if{ |s| s.include? number_to_delete}
-		end
+		puts "Voici ta pyramide :"
 		puts arr
+	elsif 
+		puts "Je t'ai dit entre 1 et 25, vas-y recommence"
+	end
+	
+
+	# if number >= 1 && number <=25 then
+	# 	for i in 1..number
+	# 		arr.push(string)
+	# 		string = string + "#"
+	# 	end
+	# 	puts "Voilà ta pyramide :"
+	# 	arr.reverse()
+	# 	puts arr
+	# elsif	
+	# 	puts "Je t'ai dit entre 1 et 25, vas-y recommence"
+	# end
 
 
+
+
+# #ruby exo_15.rb
+# 	puts "De combien d'étages souhaites-tu avoir ta pyramide ? Donne moi un nombre entre 1 et 25"
+# 	number = gets.chomp.to_i
+# 	arr=Array.new
+# 	string = "#"
+
+# 	if number >= 1 && number <=25 then
+# 		for i in 1..number
+# 			arr.push(string)
+# 			string = string + "#"
+# 		end
+# 		puts "Voilà ta pyramide :"
+# 		puts arr
+# 	elsif	
+# 		puts "Je t'ai dit entre 1 et 25, vas-y recommence"
+# 	end
+
+
+# #ruby exo_14.rb
+# #Etape 1 : on créer l'array entière avec les 50 e-mails
+# 	mail_number = 50
+# 	arr= Array.new
+
+# 		for i in 1..mail_number
+# 			if i < 10
+# 				email = "MachinBidule0" + i.to_s + "@email.fr"
+# 				arr.push(email)
+# 			elsif i >= 10
+# 				email = "MachinBidule" + i.to_s + "@email.fr"
+# 				arr.push(email)
+# 			end
+# 		end
+
+# #Etape 2 : on trouve les chiffres pairs et on les supprime grâce à la commande arr.delete_if (Exemple plus bas, arr étant le nom de mon Array)
+# 		# Find every string matching a criteria and delete the element in the array
+# 		# arr.delete_if{ |s| s.include? delete}
 		
+# 		for number_to_delete in (2..8).step(2) do
+# 			number_to_delete=number_to_delete.to_s
+# 			first_number_to_delete = "0" + number_to_delete 
+# 			arr.delete_if{ |s| s.include? first_number_to_delete}
+# 		end
+
+#     for number_to_delete in (10..mail_number).step(2) do
+# 				number_to_delete=number_to_delete.to_s
+# 				arr.delete_if{ |s| s.include? number_to_delete}
+# 		end
+# 		puts arr
+
+
+
 #ruby exo_13.rb
 	# mail_number = 50	
 	# arr= Array.new
@@ -49,31 +105,31 @@
 	# 	end
 	# 	puts arr
 
-#ruby exo_12.rb
-	# puts "Quelle est ton année de naissance ?"
-	# birth_year = gets.chomp.to_i
-	# current_year = 2023
-	# i = current_year - birth_year + 1 
-	# age = 0
-	# increment = current_year - birth_year 
+# #ruby exo_12.rb
+# 	puts "Quelle est ton année de naissance ?"
+# 	birth_year = gets.chomp.to_i
+# 	current_year = 2023
+# 	i = current_year - birth_year + 1 
+# 	age = 0
+# 	increment = current_year - birth_year 
 
-	# i.times do
-	# 	if birth_year != 2023 then
-	# 		if increment != age then
-	# 			puts "En #{birth_year}, il y a #{increment} ans, tu avais #{age} ans"
-	# 			birth_year = birth_year + 1
-	# 			age = age + 1
-	# 			increment = increment - 1
-	# 		elsif increment == age then
-	# 			puts "En #{birth_year}, il y a #{increment} ans, tu avais la moitié de l'âge que tu as aujourd'hui"
-	# 			birth_year = birth_year + 1
-	# 			age = age + 1
-	# 			increment = increment - 1
-	# 		end
-	# 	elsif birth_year == 2023 then
-	# 		puts "Et cette année 2023, tu auras #{age} ans !"
-	# 	end
-	# end	
+# 	i.times do
+# 		if birth_year != 2023 then
+# 			if increment != age then
+# 				puts "En #{birth_year}, il y a #{increment} ans, tu avais #{age} ans"
+# 				birth_year = birth_year + 1
+# 				age = age + 1
+# 				increment = increment - 1
+# 			elsif increment == age then
+# 				puts "En #{birth_year}, il y a #{increment} ans, tu avais la moitié de l'âge que tu as aujourd'hui"
+# 				birth_year = birth_year + 1
+# 				age = age + 1
+# 				increment = increment - 1
+# 			end
+# 		elsif birth_year == 2023 then
+# 			puts "Et cette année 2023, tu auras #{age} ans !"
+# 		end
+# 	end	
 
 
 #ruby exo_11.rb
@@ -134,30 +190,30 @@
 		# 	i = i-1
     # end
 
-#ruby exo_07.rb
-    # puts "Jusqu'à combien sais-tu compter ?"
-    # number = gets.chomp.to_i
-    # puts "Vas-y j'essaye"
-    # i =1
-    # number.times do
-    #     puts i
-    #     i = i + 1
-    # end
-    # puts "Et ouais mon gars, moi aussi je sais"
+# ruby exo_07.rb
+#     puts "Jusqu'à combien sais-tu compter ?"
+#     number = gets.chomp.to_i
+#     puts "Vas-y j'essaye"
+#     i =1
+#     number.times do
+#         puts i
+#         i = i + 1
+#     end
+#     puts "Et ouais mon gars, moi aussi je sais"
 
-#ruby exo_06.rb
-    # puts "Combien de fois tu veux que je te dise bonjour ?"
-    # number = gets.chomp.to_i
+# ruby exo_06.rb
+#     puts "Combien de fois tu veux que je te dise bonjour ?"
+#     number = gets.chomp.to_i
 
-    # if number == 1 then
-    #     puts "Allez, je te dis quand même bonjour une fois....Bonjour, toi"
-    # else 
-    #     i = number - 1
-    #     i.times do
-    #         puts "Bonjour toi"
-    #     end
-    #     puts "Et oui mon gars, tu n'en as eu que #{i} ! Bonne journée quand même"
-    # end
+#     if number == 1 then
+#         puts "Allez, je te dis quand même bonjour une fois....Bonjour, toi"
+#     else 
+#         i = number - 1
+#         i.times do
+#             puts "Bonjour toi"
+#         end
+#         puts "Et oui mon gars, tu n'en as eu que #{i} ! Bonne journée quand même"
+#     end
 
 #ruby exo_05.rb
     # puts "Combien de fois veux-tu chanter la vie aujourd'hui ?"
