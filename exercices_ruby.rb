@@ -1,27 +1,27 @@
-#ruby exo_17.rb
-# Exo 17 : j'ai suivi une logique où j'ai analysé la pyramide et où devait être quoi pour savoir dans chaque elem le nombre de blanc et d'étoile. Après j'ai assemblé.
-# Longueur de la dernière ligne = (nombre_de_colonne * 2)-1
-	puts "De combien d'étages souhaites-tu avoir ta pyramide ? Donne moi un nombre entre 1 et 25"
-	number = gets.chomp.to_i
-	nombre_carac=number*2 -1
-	arr=Array.new()
+# #ruby exo_17.rb
+# # Exo 17 : j'ai suivi une logique où j'ai analysé la pyramide et où devait être quoi pour savoir dans chaque elem le nombre de blanc et d'étoile. Après j'ai assemblé.
+# # Longueur de la dernière ligne = (nombre_de_colonne * 2)-1
+# 	puts "De combien d'étages souhaites-tu avoir ta pyramide ? Donne moi un nombre entre 1 et 25"
+# 	number = gets.chomp.to_i
+# 	nombre_carac=number*2 -1
+# 	arr=Array.new()
 
-	for num_ligne in 1..number
-		element = ""
-		nombre_etoile_ligne = 2*num_ligne -1
-		nombre_blanc = (nombre_carac-nombre_etoile_ligne)/2
-		for i in 1..nombre_blanc 
-			element = " " + element
-		end
-		for i in 1..nombre_etoile_ligne
-			element = element + "#"
-		end
-		for i in 1..nombre_blanc 
-			element = element + " "
-		end
-		arr.push(element)
-	end
-	puts arr
+# 	for num_ligne in 1..number
+# 		element = ""
+# 		nombre_etoile_ligne = 2*num_ligne -1
+# 		nombre_blanc = (nombre_carac-nombre_etoile_ligne)/2
+# 		for i in 1..nombre_blanc 
+# 			element = " " + element
+# 		end
+# 		for i in 1..nombre_etoile_ligne
+# 			element = element + "#"
+# 		end
+# 		for i in 1..nombre_blanc 
+# 			element = element + " "
+# 		end
+# 		arr.push(element)
+# 	end
+# 	puts arr
 
 
 #  #ruby exo_16.rb
@@ -160,24 +160,26 @@
 
 
 #ruby exo_11.rb
-	# puts "Quelle est ton année de naissance ?"
-	# birth_year = gets.chomp.to_i
-	# current_year = 2023
-	# i = current_year - birth_year + 1 
-	# age = 0
-	# increment = current_year - birth_year 
+	puts "Quelle est ton âge ?"
+	age = gets.chomp.to_i
+	current_year = 2023
+	year = current_year - age - 1
+	ton_age = age + 1
 
-	# i.times do
-	# 	if birth_year != 2023 then
-	# 		puts "En #{birth_year}, il y a #{increment} ans, tu avais #{age} ans"
-	# 		birth_year = birth_year + 1
-	# 		age = age + 1
-	# 		increment = increment - 1
-	# 	elsif birth_year == 2023 then
-	# 		puts "Et cette année 2023, tu as #{age} ans !"
-	# 	end
-	# end	
+	for i in 0..age
+		if i == 0 then
+			puts "En #{year}, il y a #{ton_age} ans, tu étais si minuscule qu'on ne pouvait même pas te donner un nombre d'année"
+			year = year + 1
+			ton_age = ton_age -1	
+		elsif i > 0 then
+			puts "En #{year}, il y a #{ton_age} ans, tu avais #{i} ans"
+			year = year + 1
+			ton_age = ton_age -1
+		end
+	end
+	puts "Et en cette année #{year}, tu vas avoir #{i+1} ans !"
 
+	
 #ruby exo_10.rb
 	# puts "Quelle est ton année de naissance ?"
 	# birth_year = gets.chomp.to_i
